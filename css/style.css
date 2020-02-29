@@ -1,0 +1,103 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+header,
+main {
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  height: 15vh;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.header__title {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header__subtitle {
+  font-size: 16px;
+}
+
+button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.app {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  font-size: 16px;
+}
+
+.app__firstPart, .app__secondPart, .app__thirdPart {
+  -ms-flex-preferred-size: 51%;
+      flex-basis: 51%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+.app__list--btnDone {
+  background-color: green;
+  color: white;
+}
+
+.app__list--btnRemove {
+  background-color: brown;
+}
+
+.app__firstPart label {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 16px;
+  }
+  .app {
+    font-size: 10px;
+  }
+  button {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 880px) {
+  .header {
+    font-size: 18px;
+  }
+  .app {
+    font-size: 14px;
+  }
+  button {
+    width: 32.2px;
+    height: 32.2px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,105 @@
+@import "_variables.scss";
+
+body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+header,
+main {
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  height: $header-height;
+  background-color: black;
+  color: white;
+  font-size: $title-fontSize;
+  text-align: center;
+  margin-top: 30px;
+
+
+  &__title {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // transform: translateY(-50%);
+  }
+
+  &__subtitle {
+    font-size: $title-fontSize * 0.8;
+  }
+}
+
+button {
+  width: $buttonSize;
+  height: $buttonSize;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.app {
+  margin-top: $app-marginHorizontal;
+  margin-bottom: $app-marginHorizontal;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: space-around;
+  font-size: 16px;
+
+
+  &__firstPart,
+  &__secondPart,
+  &__thirdPart {
+    // margin: $marginInsideTopBottom;
+    flex-basis: 51%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  &__list--btnDone {
+    background-color: green;
+    color: white;
+  }
+
+  &__list--btnRemove {
+    background-color: brown;
+  }
+}
+
+.app__firstPart label {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: $title-fontSize*0.8;
+  }
+
+  .app {
+    font-size: 10px;
+  }
+
+  button {
+    width: $buttonSize*0.8;
+    height: $buttonSize*0.8;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 880px) {
+  .header {
+    font-size: $title-fontSize*0.9;
+  }
+
+  .app {
+    font-size: 14px;
+  }
+
+  button {
+    width: $buttonSize*0.92;
+    height: $buttonSize*0.92;
+  }
+}
